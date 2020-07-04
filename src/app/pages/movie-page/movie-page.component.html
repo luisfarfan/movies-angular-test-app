@@ -1,3 +1,11 @@
 <app-simple-layout>
-  hola!
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex class="title">
+      Peliculas!
+    </div>
+    <div fxFlex fxLayoutAlign="end end">
+      <button (click)="addMovie()" mat-raised-button>Nueva pelicula</button>
+    </div>
+  </div>
+  <app-movies-list [data]="movies"></app-movies-list>
 </app-simple-layout>

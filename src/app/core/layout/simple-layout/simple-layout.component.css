@@ -5,8 +5,8 @@
   flex-direction: column;
   -webkit-box-flex: 1;
   flex: 1 0 auto;
-  width: 100%;
-  min-width: 100%;
+  width: 97%;
+  min-width: 97%;
 }
 
 .p-24 {

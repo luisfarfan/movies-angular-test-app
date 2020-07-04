@@ -5,6 +5,13 @@ export class StorageService {
 
   constructor(key: string) {
     this.key = key;
+    this.validateStorage();
+  }
+
+  private validateStorage(): void {
+    if (!localStorage.getItem(this.key)) {
+      localStorage.setItem(this.key, JSON.stringify([]));
+    }
   }
 
   set(data): void {
