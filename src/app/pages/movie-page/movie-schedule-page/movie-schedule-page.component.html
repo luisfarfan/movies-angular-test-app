@@ -1,11 +1,15 @@
 <app-simple-layout>
-  <div fxLayout="row" fxLayoutAlign="start center">
-    <div fxFlex class="title">
-      Peliculas!
+  <div fxLayout="column" fxLayoutGap="20px">
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <div fxFlex class="title">
+        Peliculas!
+      </div>
+      <div fxFlex fxLayoutAlign="end end">
+        <button (click)="addSchedule()" mat-raised-button>Agregar horario</button>
+      </div>
     </div>
-    <div fxFlex fxLayoutAlign="end end">
-      <button (click)="addSchedule()" mat-raised-button>Agregar horario</button>
+    <div fxFlex>
+      <app-movies-schedule [movie]="movie"></app-movies-schedule>
     </div>
   </div>
-  <app-movies-schedule [movie]="movie"></app-movies-schedule>
 </app-simple-layout>

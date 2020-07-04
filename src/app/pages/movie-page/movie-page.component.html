@@ -1,11 +1,15 @@
 <app-simple-layout>
-  <div fxLayout="row" fxLayoutAlign="start center">
-    <div fxFlex class="title">
-      Peliculas!
+  <div fxLayout="column" fxLayoutGap="20px">
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <div fxFlex class="title">
+        Peliculas!
+      </div>
+      <div fxFlex fxLayoutAlign="end end">
+        <button color="primary" (click)="addMovie()" mat-raised-button>Nueva pelicula</button>
+      </div>
     </div>
-    <div fxFlex fxLayoutAlign="end end">
-      <button (click)="addMovie()" mat-raised-button>Nueva pelicula</button>
+    <div fxFlex>
+      <app-movies-list (dataChanged)="edit($event)" (dataDeleted)="delete($event)" [data]="movies"></app-movies-list>
     </div>
   </div>
-  <app-movies-list (dataChanged)="edit($event)" (dataDeleted)="delete($event)" [data]="movies"></app-movies-list>
 </app-simple-layout>
