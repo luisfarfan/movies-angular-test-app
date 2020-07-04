@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-movies-list',
@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movies-list.component.css']
 })
 export class MoviesListComponent implements OnInit {
+  @Input() data: any[];
 
-  constructor() { }
+  displayedColumns: string[] = ['id', 'name', 'creation_date', 'status', 'buttons'];
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
