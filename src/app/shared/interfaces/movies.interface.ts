@@ -19,11 +19,11 @@ export enum MoviesStatus {
 export const MoviesStatusColor = [
   {
     status: MoviesStatus.ACTIVO,
-    color: 'green'
+    color: 'accent'
   },
   {
     status: MoviesStatus.INACTIVO,
-    color: 'red'
+    color: 'warn'
   }
 ];
 

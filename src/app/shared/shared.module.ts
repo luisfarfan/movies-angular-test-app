@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MovieStatusPipe } from './pipes/movie-status.pipe';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [MovieStatusPipe],
   imports: [
     CommonModule,
     FlexLayoutModule
   ],
-  exports: [FlexLayoutModule, CommonModule]
+  exports: [FlexLayoutModule, CommonModule, MovieStatusPipe]
 })
 export class SharedModule {
 }

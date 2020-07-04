@@ -19,6 +19,8 @@ import { NgxMatDatetimePickerModule, NgxMatNativeDateModule, NgxMatTimepickerMod
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { RouterModule } from '@angular/router';
 import { MovieModalScheduleService } from './movie-modal-schedule.service';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatChipsModule } from '@angular/material/chips';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { MovieModalScheduleService } from './movie-modal-schedule.service';
     MatListModule,
     MatDatepickerModule,
     RouterModule,
+    MatBadgeModule,
+    MatChipsModule
   ],
   exports: [MoviesAddEditComponent, MoviesListComponent, MovieScheduleAddComponent, MoviesScheduleComponent],
   providers: [MovieModalService, MovieModalScheduleService]
