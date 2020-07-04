@@ -1,13 +1,13 @@
 <mat-list>
-  <div mat-subheader>Folders</div>
+  <div mat-subheader>Horarios</div>
   <mat-list-item *ngFor="let future of getFutureSchedules">
-    <mat-icon mat-list-icon>date</mat-icon>
-    <div mat-line> {{future.datetime | date}} </div>
+    <mat-icon color="primary" mat-list-icon>alarm_on</mat-icon>
+    <div mat-line> {{future.datetime | date:'short'}} </div>
   </mat-list-item>
   <mat-divider></mat-divider>
-  <div mat-subheader>Notes</div>
+  <div mat-subheader>Horarios pasados</div>
   <mat-list-item *ngFor="let pass of getPassSchedules">
-    <mat-icon mat-list-icon>note</mat-icon>
-    <div mat-line> {{pass.datetime | date}} </div>
+    <mat-icon color="warn" mat-list-icon>alarm_on</mat-icon>
+    <div mat-line> {{pass.datetime | date: 'short'}} </div>
   </mat-list-item>
 </mat-list>

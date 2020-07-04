@@ -33,9 +33,7 @@ export class MovieScheduleAddComponent implements OnInit {
   }
 
   submit(): void {
-    const date = new Date();
-    const localCompleteDate = date.toISOString();
-    const datetime = localCompleteDate.substring(0, localCompleteDate.length - 1);
+    const datetime = new Date(this.form.get('datetime').value);
     this.movieService.addSchedule(this.movieId, {datetime});
     this.dialogRef.close(true);
   }

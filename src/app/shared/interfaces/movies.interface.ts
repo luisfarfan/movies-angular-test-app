@@ -8,7 +8,7 @@ export interface Movies {
 
 export interface MovieSchedule {
   id?: string;
-  datetime: string;
+  datetime: Date;
 }
 
 export enum MoviesStatus {
