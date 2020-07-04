@@ -35,8 +35,9 @@ export class MoviesAddEditComponent implements OnInit {
 
   createForm(): void {
     this.form = this.fb.group({
+      id: [this.movie?.id],
       name: [this.movie?.name, Validators.required],
-      creation_date: [this.movie?.creation_date, Validators.required],
+      creation_date: [this.movie?.creation_date || new Date(), Validators.required],
       status: [this.movie?.status, Validators.required],
     });
   }

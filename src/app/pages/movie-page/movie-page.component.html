@@ -7,5 +7,5 @@
       <button (click)="addMovie()" mat-raised-button>Nueva pelicula</button>
     </div>
   </div>
-  <app-movies-list (dataChanged)="edit($event)" [data]="movies"></app-movies-list>
+  <app-movies-list (dataChanged)="edit($event)" (dataDeleted)="delete($event)" [data]="movies"></app-movies-list>
 </app-simple-layout>

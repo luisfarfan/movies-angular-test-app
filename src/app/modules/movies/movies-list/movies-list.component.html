@@ -25,7 +25,7 @@
       <button mat-icon-button color="primary" (click)="$event.stopPropagation();edit(element.id)" aria-label="delete">
         <mat-icon class="amber-fg">edit</mat-icon>
       </button>
-      <button mat-icon-button color="warn" (click)="$event.stopPropagation();" aria-label="delete">
+      <button mat-icon-button color="warn" (click)="$event.stopPropagation();delete(element.id)" aria-label="delete">
         <mat-icon class="amber-fg">delete</mat-icon>
       </button>
     </td>

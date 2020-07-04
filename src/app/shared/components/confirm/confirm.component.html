@@ -1,1 +1,10 @@
-<p>confirm works!</p>
+<h2 mat-dialog-title>{{ 'Confirmación' }}</h2>
+<mat-dialog-content class="mat-typography">
+  Esta seguro de realizar esta acción?
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div class="text-center">
+    <button (click)="close(true)" mat-raised-button color="warn">Si</button>
+    <button (click)="close(false)" mat-raised-button color="accent">Cancelar</button>
+  </div>
+</mat-dialog-actions>

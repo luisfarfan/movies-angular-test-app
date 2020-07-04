@@ -42,4 +42,11 @@ export class StorageService {
     this.set(storageData);
     return data;
   }
+
+  delete<T>(uuid: string): void {
+    const storageData = this.list<T>();
+    const index = storageData.findIndex(d => uuid === (d as any).id);
+    storageData.splice(index, 1);
+    this.set(storageData);
+  }
 }

@@ -32,7 +32,13 @@ export class MoviePageComponent implements OnInit {
     }
   }
 
-  edit(response: boolean) {
+  edit(response: boolean): void {
+    if (response) {
+      this.getMovies();
+    }
+  }
+
+  delete(response): void {
     if (response) {
       this.getMovies();
     }

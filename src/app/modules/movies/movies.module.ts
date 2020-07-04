@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MovieModalService } from './movie-modal.service';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { ConfirmModule } from '../../shared/components/confirm/confirm.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MatSelectModule } from '@angular/material/select';
     ReactiveFormsModule,
     FormsModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    ConfirmModule
   ],
   exports: [MoviesAddEditComponent, MoviesListComponent],
   providers: [MovieModalService]
