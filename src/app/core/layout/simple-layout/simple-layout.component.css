@@ -1,0 +1,14 @@
+.main-content {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  width: 100%;
+  min-width: 100%;
+}
+
+.p-24 {
+  padding: 24px !important;
+}

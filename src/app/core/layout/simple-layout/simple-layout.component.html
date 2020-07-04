@@ -1,3 +1,48 @@
-<ng-content>
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="side" opened="true">
+    <div class="logomain">Logo Part</div>
+    <mat-nav-list>
+      <mat-list-item routerLink="1" routerLinkActive="active">
+        <mat-icon mat-list-icon>person</mat-icon>
+        <div fxFlex="10"></div>
+        <div class="sidenav-item">
+          <h5 class="lead">About</h5>
+        </div>
+      </mat-list-item>
 
-</ng-content>
+      <mat-list-item routerLink="2" routerLinkActive="active">
+        <mat-icon mat-list-icon>settings</mat-icon>
+        <div fxFlex="10"></div>
+        <div class="sidenav-item">
+          <h5 class="lead">Services</h5>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="3" routerLinkActive="active">
+        <mat-icon mat-list-icon>local_phone</mat-icon>
+        <div fxFlex="10"></div>
+        <div class="sidenav-item">
+          <h5 class="lead">Contact</h5>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+
+  </mat-sidenav>
+  <mat-toolbar color="primary" #toolbar>
+    <button
+      type="button"
+      mat-icon-button
+      (click)="sidenav.open()"
+      title="Open sidenav">
+      <mat-icon>menu</mat-icon>
+    </button>
+    {{ title }}
+  </mat-toolbar>
+
+  <div class="main-content p-24">
+    <!-- <router-outlet></router-outlet> -->
+    <ng-content>
+
+    </ng-content>
+  </div>
+</mat-sidenav-container>
