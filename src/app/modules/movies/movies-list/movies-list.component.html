@@ -28,6 +28,10 @@
       <button mat-icon-button color="warn" (click)="$event.stopPropagation();delete(element.id)" aria-label="delete">
         <mat-icon class="amber-fg">delete</mat-icon>
       </button>
+      <button mat-icon-button color="primary" [routerLink]="['/movie', element.id]" (click)="$event.stopPropagation();"
+              aria-label="delete">
+        <mat-icon class="amber-fg">alarm_on</mat-icon>
+      </button>
     </td>
   </ng-container>
 

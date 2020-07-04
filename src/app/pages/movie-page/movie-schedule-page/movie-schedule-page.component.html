@@ -1,0 +1,11 @@
+<app-simple-layout>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex class="title">
+      Peliculas!
+    </div>
+    <div fxFlex fxLayoutAlign="end end">
+      <button (click)="addSchedule()" mat-raised-button>Agregar horario</button>
+    </div>
+  </div>
+  <app-movies-schedule [movie]="movie"></app-movies-schedule>
+</app-simple-layout>

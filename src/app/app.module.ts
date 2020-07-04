@@ -4,6 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import {
+  NgxMatDateAdapter,
+  NgxMatDatetimePickerModule,
+  NgxMatNativeDateAdapter, NgxMatNativeDateModule,
+  NgxMatTimepickerModule
+} from '@angular-material-components/datetime-picker';
 
 const routes: Routes = [
   {
@@ -21,7 +27,9 @@ const routes: Routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    {provide: NgxMatDateAdapter, useClass: NgxMatNativeDateAdapter},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

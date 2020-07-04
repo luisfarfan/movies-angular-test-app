@@ -3,6 +3,12 @@ export interface Movies {
   name: string;
   creation_date: string;
   status: MoviesStatus;
+  schedules?: MovieSchedule[];
+}
+
+export interface MovieSchedule {
+  id?: string;
+  datetime: string;
 }
 
 export enum MoviesStatus {

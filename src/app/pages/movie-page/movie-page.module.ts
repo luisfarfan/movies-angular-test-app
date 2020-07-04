@@ -7,10 +7,11 @@ import { LayoutModule } from '../../core';
 import { MoviesModule } from '../../modules/movies/movies.module';
 import { SharedModule } from '../../shared/shared.module';
 import { MatButtonModule } from '@angular/material/button';
+import { MovieSchedulePageComponent } from './movie-schedule-page/movie-schedule-page.component';
 
 
 @NgModule({
-  declarations: [MoviePageComponent],
+  declarations: [MoviePageComponent, MovieSchedulePageComponent],
   imports: [
     MoviePageRoutingModule,
     LayoutModule,
